@@ -1,32 +1,66 @@
-﻿# HPCL Petrol Pump Scraper
+# HPCL Fuel Outlet Scraper
 
-Python project for scraping and processing Hindustan Petroleum Corporation Limited (HPCL) petrol pump location data.
+Browser-based Python automation for collecting HPCL outlet details from location-listing pages and building state-wise and consolidated CSV datasets.
 
-## Project Contents
+## How it works
 
-This repository contains the Python source files and sample data copied from the original project folder.
+1. Reads an input CSV with the columns State and URL.
+2. Opens each configured listing URL with Playwright Chromium in headless mode.
+3. Requests sequential listing pages by adding a page number to the base URL.
+4. Parses outlet cards with BeautifulSoup and follows each available map/detail link to read opening/status text and directions links.
+5. Saves a deduplicated CSV for each input state and a consolidated master file.
+
+## Output data
+
+The script standardizes these columns:
+
+- Brand, Dealer_Name, and Address
+- City, State, and Pincode
+- Phone
+- Latitude and Longitude
+- Status
+- Google_Map_URL
+
+The output folder contains one <State>_HPCL.csv file for each state with records, plus All_States_HPCL.csv. CSVs are saved with UTF-8 BOM encoding for spreadsheet compatibility.
+
+## Repository contents
+
+- hpcl_scraper_CSV.py — scraper entry point
+- Input CSV examples — source state and URL lists
+- A sample outlet CSV — example output data
 
 ## Requirements
 
-- Python version appropriate for the project
-- Python dependencies used by the scraper
+- Python 3.10 or a compatible version
+- Playwright
+- pandas
+- beautifulsoup4
+- lxml
 
-## Setup
+Install and prepare the browser:
 
-1. Clone this repository.
-2. Open a terminal in the project directory.
-3. If `requirements.txt` is included, install dependencies:
+    python -m venv .venv
+    .venv/Scripts/Activate.ps1
+    pip install playwright pandas beautifulsoup4 lxml
+    playwright install chromium
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+## Configuration and run
 
-4. Run the relevant Python scraper script.
+Edit the INPUT_CSV and OUTPUT_FOLDER constants near the beginning of hpcl_scraper_CSV.py. They currently contain absolute Windows paths from the original workstation. Point INPUT_CSV to an input CSV in your local checkout and choose a writable output folder.
 
-## Sample Data
+The input file must contain:
 
-Sample files are provided for testing and demonstration. Check the data's licensing and permitted use before redistribution.
+| Column | Purpose |
+|---|---|
+| State | State label assigned to records from that input row |
+| URL | Base listing URL used to request paginated results |
 
-## Disclaimer
+Run:
 
-This is an independent project and is not affiliated with or endorsed by Hindustan Petroleum Corporation Limited. Respect website terms of use and applicable access policies.
+    python hpcl_scraper_CSV.py
+
+## Notes
+
+- A state file is written only when records were collected for that state; the master file is written when the run has data.
+- Website markup, pagination, or detail-page links can change and may require selector updates.
+- Use authorized collection practices and check the website's terms and applicable rules before using or redistributing the data.

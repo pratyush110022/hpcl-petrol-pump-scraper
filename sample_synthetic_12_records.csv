@@ -1,0 +1,13 @@
+Brand,Dealer_Name,Address,City,State,Pincode,Phone,Latitude,Longitude,Status,Google_Map_URL
+HPCL,Synthetic Outlet 01,Synthetic Test Road 01,Bengaluru,Karnataka,000000,0000000000,12.9716,77.5946,Sample Status,https://example.com/maps/hpcl-01
+HPCL,Synthetic Outlet 02,Synthetic Test Road 02,Mysuru,Karnataka,000000,0000000000,12.2958,76.6394,Sample Status,https://example.com/maps/hpcl-02
+HPCL,Synthetic Outlet 03,Synthetic Test Road 03,Mumbai,Maharashtra,000000,0000000000,19.076,72.8777,Sample Status,https://example.com/maps/hpcl-03
+HPCL,Synthetic Outlet 04,Synthetic Test Road 04,Pune,Maharashtra,000000,0000000000,18.5204,73.8567,Sample Status,https://example.com/maps/hpcl-04
+HPCL,Synthetic Outlet 05,Synthetic Test Road 05,Bhubaneswar,Odisha,000000,0000000000,20.2961,85.8245,Sample Status,https://example.com/maps/hpcl-05
+HPCL,Synthetic Outlet 06,Synthetic Test Road 06,Cuttack,Odisha,000000,0000000000,20.4625,85.883,Sample Status,https://example.com/maps/hpcl-06
+HPCL,Synthetic Outlet 07,Synthetic Test Road 07,Hyderabad,Telangana,000000,0000000000,17.385,78.4867,Sample Status,https://example.com/maps/hpcl-07
+HPCL,Synthetic Outlet 08,Synthetic Test Road 08,Vijayawada,Andhra Pradesh,000000,0000000000,16.5062,80.648,Sample Status,https://example.com/maps/hpcl-08
+HPCL,Synthetic Outlet 09,Synthetic Test Road 09,Jaipur,Rajasthan,000000,0000000000,26.9124,75.7873,Sample Status,https://example.com/maps/hpcl-09
+HPCL,Synthetic Outlet 10,Synthetic Test Road 10,Lucknow,Uttar Pradesh,000000,0000000000,26.8467,80.9462,Sample Status,https://example.com/maps/hpcl-10
+HPCL,Synthetic Outlet 11,Synthetic Test Road 11,Kochi,Kerala,000000,0000000000,9.9312,76.2673,Sample Status,https://example.com/maps/hpcl-11
+HPCL,Synthetic Outlet 12,Synthetic Test Road 12,Chennai,Tamil Nadu,000000,0000000000,13.0827,80.2707,Sample Status,https://example.com/maps/hpcl-12

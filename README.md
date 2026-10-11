@@ -27,7 +27,7 @@ The output folder contains one <State>_HPCL.csv file for each state with records
 
 - hpcl_scraper_CSV.py — scraper entry point
 - Input CSV examples — source state and URL lists
-- A sample outlet CSV — example output data
+- `delhi_HPCL.csv` — existing scraper output example
 
 ## Requirements
 
@@ -64,3 +64,7 @@ Run:
 - A state file is written only when records were collected for that state; the master file is written when the run has data.
 - Website markup, pagination, or detail-page links can change and may require selector updates.
 - Use authorized collection practices and check the website's terms and applicable rules before using or redistributing the data.
+
+## Synthetic sample data
+
+[`sample_synthetic_12_records.csv`](sample_synthetic_12_records.csv) contains **12 synthetic test records** with the output columns used by this scraper. The rows were generated for schema inspection and portfolio/demo purposes; they were not collected from the source website or API. Names and addresses are fictional, contact details and example.com links are placeholders, coordinates are illustrative, and any ratings/prices/amenities are not real or current. Do not use these records for navigation, operational decisions, or market/pricing analysis.
